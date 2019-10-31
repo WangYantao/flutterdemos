@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'widgets/safearea.dart';
+import 'widgets/expanded.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,6 +35,12 @@ class HomeWidget extends StatelessWidget{
                 _toNextPage(context, 'SafeArea');
               },
             ),
+            MaterialButton(
+              child: Text('Expanded'),
+              onPressed: (){
+                _toNextPage(context, 'Expanded');
+              },
+            ),
           ],
         ),
       ),
@@ -42,7 +49,11 @@ class HomeWidget extends StatelessWidget{
 
   void _toNextPage(BuildContext context, String pageName){
     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-      return SafeAreaPage();
+      if(pageName == 'SafeArea') {
+        return SafeAreaPage();
+      }else if(pageName == 'Expanded'){
+        return ExpandedPage();
+      }
     }));
   }
 }
