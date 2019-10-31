@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+/**
+ * 功能：异形屏中内容安全显示
+ * ps：如果有 appbar则不需要再自己适配，appbar中已经进行处理了
+ */
 class SafeAreaPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
