@@ -41,8 +41,10 @@ class Content extends StatelessWidget {
       body: Center(
         child: MaterialButton(
             onPressed: shareWidget.changeUseSafeArea,
+            color: Colors.blue,
             child: Text(
               '点击使用/不使用safearea',
+              style: TextStyle(color: Colors.white),
             )),
       ),
     );
