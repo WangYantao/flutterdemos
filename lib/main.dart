@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'widgets/safearea.dart';
 import 'widgets/expanded.dart';
+import 'widgets/wrap.dart';
+import 'widgets/animatedcontainer.dart';
+import 'widgets/Opacity.dart';
 
 void main() => runApp(MyApp());
 
@@ -41,6 +44,24 @@ class HomeWidget extends StatelessWidget{
                 _toNextPage(context, 'Expanded');
               },
             ),
+            MaterialButton(
+              child: Text('Wrap'),
+              onPressed: (){
+                _toNextPage(context, 'Wrap');
+              },
+            ),
+            MaterialButton(
+              child: Text('AnimatedContainer'),
+              onPressed: (){
+                _toNextPage(context, 'AnimatedContainer');
+              },
+            ),
+            MaterialButton(
+              child: Text('Opacity'),
+              onPressed: (){
+                _toNextPage(context, 'Opacity');
+              },
+            ),
           ],
         ),
       ),
@@ -53,6 +74,12 @@ class HomeWidget extends StatelessWidget{
         return SafeAreaPage();
       }else if(pageName == 'Expanded'){
         return ExpandedPage();
+      }else if(pageName == 'Wrap'){
+        return WrapPage();
+      }else if(pageName == 'AnimatedContainer'){
+        return AnimatedContainerPage();
+      }else if(pageName == 'Opacity'){
+        return OpacityPage();
       }
     }));
   }
