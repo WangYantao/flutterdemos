@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'others.dart';
 
 /**
  * 自动拉伸子控件的宽/高
@@ -53,13 +54,3 @@ class ExpandedPage extends StatelessWidget{
   }
 }
 
-class ChildWidget extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(10.0),
-      padding: EdgeInsets.all(10.0),
-      color: Colors.purple,
-    );
-  }
-}
